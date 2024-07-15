@@ -43,7 +43,7 @@ constexpr std::integral_constant<int, F1_0 / DESIGNATED_GAME_FPS> DESIGNATED_GAM
 
 #ifdef NDEBUG
 constexpr auto MINIMUM_FPS = DESIGNATED_GAME_FPS;
-constexpr std::integral_constant<unsigned, 200> MAXIMUM_FPS{};
+constexpr std::integral_constant<unsigned, 1000> MAXIMUM_FPS{};
 #else
 constexpr std::integral_constant<unsigned, 1> MINIMUM_FPS{};
 constexpr std::integral_constant<unsigned, 1000> MAXIMUM_FPS{};
