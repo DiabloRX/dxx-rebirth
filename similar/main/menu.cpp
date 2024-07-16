@@ -1376,11 +1376,11 @@ void copy_sensitivity_from_menu_to_cfg(const MenuItems &menuitems, const CopyPar
 }
 
 #define DXX_INPUT_SENSITIVITY(VERB,OPT,VAL,VALUE_INDEX_ENUM_SCOPE)	\
-	DXX_MENUITEM(VERB, SLIDER, TXT_TURN_LR, opt_##OPT##_turn_lr, VAL[VALUE_INDEX_ENUM_SCOPE::turn_lr], 0, 16)	\
-	DXX_MENUITEM(VERB, SLIDER, TXT_PITCH_UD, opt_##OPT##_pitch_ud, VAL[VALUE_INDEX_ENUM_SCOPE::pitch_ud], 0, 16)	\
-	DXX_MENUITEM(VERB, SLIDER, TXT_SLIDE_LR, opt_##OPT##_slide_lr, VAL[VALUE_INDEX_ENUM_SCOPE::slide_lr], 0, 16)	\
-	DXX_MENUITEM(VERB, SLIDER, TXT_SLIDE_UD, opt_##OPT##_slide_ud, VAL[VALUE_INDEX_ENUM_SCOPE::slide_ud], 0, 16)	\
-	DXX_MENUITEM(VERB, SLIDER, TXT_BANK_LR, opt_##OPT##_bank_lr, VAL[VALUE_INDEX_ENUM_SCOPE::bank_lr], 0, 16)	\
+	DXX_MENUITEM(VERB, SLIDER, TXT_TURN_LR, opt_##OPT##_turn_lr, VAL[VALUE_INDEX_ENUM_SCOPE::turn_lr], 0, 100)	\
+	DXX_MENUITEM(VERB, SLIDER, TXT_PITCH_UD, opt_##OPT##_pitch_ud, VAL[VALUE_INDEX_ENUM_SCOPE::pitch_ud], 0, 100)	\
+	DXX_MENUITEM(VERB, SLIDER, TXT_SLIDE_LR, opt_##OPT##_slide_lr, VAL[VALUE_INDEX_ENUM_SCOPE::slide_lr], 0, 100)	\
+	DXX_MENUITEM(VERB, SLIDER, TXT_SLIDE_UD, opt_##OPT##_slide_ud, VAL[VALUE_INDEX_ENUM_SCOPE::slide_ud], 0, 100)	\
+	DXX_MENUITEM(VERB, SLIDER, TXT_BANK_LR, opt_##OPT##_bank_lr, VAL[VALUE_INDEX_ENUM_SCOPE::bank_lr], 0, 100)	\
 
 #define DXX_INPUT_CONFIG_MENU(VERB)	\
 	DXX_MENUITEM(VERB, TEXT, "Keyboard Sensitivity:", opt_label_kb)	\
@@ -1436,15 +1436,15 @@ static void input_config_keyboard()
 }
 
 #define DXX_INPUT_SENSITIVITY(VERB,OPT,VAL,VALUE_INDEX_ENUM_SCOPE)	                           \
-	DXX_MENUITEM(VERB, SLIDER, TXT_TURN_LR, opt_##OPT##_turn_lr, VAL[VALUE_INDEX_ENUM_SCOPE::turn_lr], 0, 16)	\
-	DXX_MENUITEM(VERB, SLIDER, TXT_PITCH_UD, opt_##OPT##_pitch_ud, VAL[VALUE_INDEX_ENUM_SCOPE::pitch_ud], 0, 16)	\
-	DXX_MENUITEM(VERB, SLIDER, TXT_SLIDE_LR, opt_##OPT##_slide_lr, VAL[VALUE_INDEX_ENUM_SCOPE::slide_lr], 0, 16)	\
-	DXX_MENUITEM(VERB, SLIDER, TXT_SLIDE_UD, opt_##OPT##_slide_ud, VAL[VALUE_INDEX_ENUM_SCOPE::slide_ud], 0, 16)	\
-	DXX_MENUITEM(VERB, SLIDER, TXT_BANK_LR, opt_##OPT##_bank_lr, VAL[VALUE_INDEX_ENUM_SCOPE::bank_lr], 0, 16)	\
+	DXX_MENUITEM(VERB, SLIDER, TXT_TURN_LR, opt_##OPT##_turn_lr, VAL[VALUE_INDEX_ENUM_SCOPE::turn_lr], 0, 100)	\
+	DXX_MENUITEM(VERB, SLIDER, TXT_PITCH_UD, opt_##OPT##_pitch_ud, VAL[VALUE_INDEX_ENUM_SCOPE::pitch_ud], 0, 100)	\
+	DXX_MENUITEM(VERB, SLIDER, TXT_SLIDE_LR, opt_##OPT##_slide_lr, VAL[VALUE_INDEX_ENUM_SCOPE::slide_lr], 0, 100)	\
+	DXX_MENUITEM(VERB, SLIDER, TXT_SLIDE_UD, opt_##OPT##_slide_ud, VAL[VALUE_INDEX_ENUM_SCOPE::slide_ud], 0, 100)	\
+	DXX_MENUITEM(VERB, SLIDER, TXT_BANK_LR, opt_##OPT##_bank_lr, VAL[VALUE_INDEX_ENUM_SCOPE::bank_lr], 0, 100)	\
 
 #define DXX_INPUT_THROTTLE_SENSITIVITY(VERB,OPT,VAL,VALUE_INDEX_ENUM_SCOPE)	\
 	DXX_INPUT_SENSITIVITY(VERB,OPT,VAL,VALUE_INDEX_ENUM_SCOPE)	\
-	DXX_MENUITEM(VERB, SLIDER, TXT_THROTTLE, opt_##OPT##_throttle, VAL[VALUE_INDEX_ENUM_SCOPE::throttle], 0, 16)	\
+	DXX_MENUITEM(VERB, SLIDER, TXT_THROTTLE, opt_##OPT##_throttle, VAL[VALUE_INDEX_ENUM_SCOPE::throttle], 0, 100)	\
 
 #define DXX_INPUT_CONFIG_MENU(VERB)	                                   \
 	DXX_MENUITEM(VERB, TEXT, "Mouse Sensitivity:", opt_label_ms)	             \
@@ -1454,7 +1454,7 @@ static void input_config_keyboard()
 	DXX_INPUT_THROTTLE_SENSITIVITY(VERB,mo,PlayerCfg.MouseOverrun,player_config_mouse_index)	\
 	DXX_MENUITEM(VERB, TEXT, "", opt_label_blank_mo)	\
 	DXX_MENUITEM(VERB, TEXT, "Mouse FlightSim Deadzone:", opt_label_mfsd)	\
-	DXX_MENUITEM(VERB, SLIDER, "X/Y", opt_mfsd_deadzone, PlayerCfg.MouseFSDead, 0, 16)	\
+	DXX_MENUITEM(VERB, SLIDER, "X/Y", opt_mfsd_deadzone, PlayerCfg.MouseFSDead, 0, 100)	\
 
 namespace mouse_sensitivity {
 
